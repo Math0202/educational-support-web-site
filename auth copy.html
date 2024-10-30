@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up - Educational Support Platform</title>
+    <link rel="stylesheet" href="auth-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <!-- Login Form -->
+            <div class="auth-card hidden" id="login-card">
+                <div class="auth-header">
+                    <h1>Welcome Back</h1>
+                    <p>Sign in to continue your learning journey</p>
+                </div>
+                <form class="auth-form" id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="mail" class="input-icon"></i>
+                            <input type="email" id="login-email" name="email" required 
+                                   placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="lock" class="input-icon"></i>
+                            <input type="password" id="login-password" name="password" required 
+                                   placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" id="remember-me">
+                            <span class="checkbox-label">Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                    <div class="divider">
+                        <span>or continue with</span>
+                    </div>
+                    <div class="social-buttons">
+                        <button type="button" class="btn btn-outline social-btn">
+                            <i data-lucide="github" class="social-icon"></i>
+                            GitHub
+                        </button>
+                        <button type="button" class="btn btn-outline social-btn">
+                            <i data-lucide="google" class="social-icon"></i>
+                            Google
+                        </button>
+                    </div>
+                    <p class="auth-switch">
+                        Don't have an account? 
+                        <a href="#" class="switch-btn" data-show="signup">Sign up</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div class="auth-card " id="signup-card">
+                <div class="auth-header">
+                    <h1>Create Account</h1>
+                    <p>Join our community of learners</p>
+                </div>
+                <form class="auth-form" id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="user" class="input-icon"></i>
+                            <input type="text" id="signup-name" name="name" required 
+                                   placeholder="Enter your full name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="mail" class="input-icon"></i>
+                            <input type="email" id="signup-email" name="email" required 
+                                   placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="lock" class="input-icon"></i>
+                            <input type="password" id="signup-password" name="password" required 
+                                   placeholder="Create a password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-role">I am a</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="users" class="input-icon"></i>
+                            <select id="signup-role" name="role" required>
+                                <option value="">Select your role</option>
+                                <option value="student">Student</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="parent">Parent</option>
+                                <option value="volunteer">Volunteer</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" id="terms" required>
+                            <span class="checkbox-label">I agree to the Terms and Privacy Policy</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                    <div class="divider">
+                        <span>or sign up with</span>
+                    </div>
+                    <div class="social-buttons">
+                        <button type="button" class="btn btn-outline social-btn">
+                            <i data-lucide="github" class="social-icon"></i>
+                            GitHub
+                        </button>
+                        <button type="button" class="btn btn-outline social-btn">
+                            <i data-lucide="google" class="social-icon"></i>
+                            Google
+                        </button>
+                    </div>
+                    <p class="auth-switch">
+                        Already have an account? 
+                        <a href="#" class="switch-btn" data-show="login">Sign in</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Switch between login and signup forms
+        document.querySelectorAll('.switch-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const show = button.dataset.show;
+                
+                document.getElementById('signup-card').classList.toggle('hidden');
+                document.getElementById('login-card').classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

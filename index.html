@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Support Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <a href="#"><i style="color: blue;" data-lucide="book-open"></i></a>
+            <div class="auth-buttons">
+                <a href="auth.html"><button class="btn btn-outline">Log In</button></a>
+                <a href="auth copy.html"><button class="btn btn-primary">Sign Up</button></a>
+            </div>
+        </header>
+        <br><br><br>
+        <h1 style="font-weight: bolder; color: blue;">Educational Support Platform</h1>
+
+        <main>
+            <div class="welcome-card card">
+                <div class="card-header">
+                    <h2>Welcome to our community!</h2>
+                    <p class="description">Ask questions, seek guidance, and support fellow students.</p>
+                </div>
+                <div class="card-content">
+                    <input type="text" placeholder="Search for questions or topics..." class="search-input">
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary">
+                        <i data-lucide="help-circle"></i>
+                        Ask a Question
+                    </button>
+                    <button class="btn btn-outline">
+                        <i data-lucide="book-open"></i>
+                        Share Advice
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i data-lucide="dollar-sign"></i>
+                        Request Support
+                    </button>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <div class="tabs-list">
+                    <button class="tab active" data-tab="trending">Trending</button>
+                    <button class="tab" data-tab="recent">Recent</button>
+                    <button class="tab" data-tab="unanswered">Unanswered</button>
+                </div>
+                <div class="tab-content active" id="trending">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Trending Questions</h2>
+                        </div>
+                        <div class="card-content">
+                            <ul class="question-list">
+                                <li>
+                                    <i data-lucide="trending-up" class="icon-blue"></i>
+                                    <span>How do I improve my study habits?</span>
+                                </li>
+                                <li>
+                                    <i data-lucide="trending-up" class="icon-blue"></i>
+                                    <span>Tips for managing exam stress?</span>
+                                </li>
+                                <li>
+                                    <i data-lucide="trending-up" class="icon-blue"></i>
+                                    <span>What career options are available after high school?</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add this right after the trending tab content div -->
+<div class="tab-content" id="recent">
+    <div class="card">
+        <div class="card-header">
+            <h2>Recent Questions</h2>
+        </div>
+        <div class="card-content">
+            <ul class="question-list">
+                <li>
+                    <i data-lucide="clock" class="icon-blue"></i>
+                    <span>What are the requirements for university admission?</span>
+                </li>
+                <li>
+                    <i data-lucide="clock" class="icon-blue"></i>
+                    <span>How to prepare for final exams?</span>
+                </li>
+                <li>
+                    <i data-lucide="clock" class="icon-blue"></i>
+                    <span>Need help with mathematics homework</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="tab-content" id="unanswered">
+    <div class="card">
+        <div class="card-header">
+            <h2>Unanswered Questions</h2>
+        </div>
+        <div class="card-content">
+            <ul class="question-list">
+                <li>
+                    <i data-lucide="help-circle" class="icon-blue"></i>
+                    <span>Looking for a physics tutor in Windhoek</span>
+                </li>
+                <li>
+                    <i data-lucide="help-circle" class="icon-blue"></i>
+                    <span>Need assistance with scholarship applications</span>
+                </li>
+                <li>
+                    <i data-lucide="help-circle" class="icon-blue"></i>
+                    <span>How to balance school and part-time work?</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Add this after the tabs section -->
+<div class="questions-section">
+    <div class="card">
+        <div class="card-header">
+            <h2>Questions & Answers</h2>
+        </div>
+        <div class="card-content">
+            <div class="question-thread">
+                <div class="question-main">
+                    <div class="question-header">
+                        <div class="user-info">
+                            <div class="avatar">
+                                <img src="/placeholder.svg?height=32&width=32" alt="User">
+                                <span class="avatar-fallback">JD</span>
+                            </div>
+                            <span class="username">John Doe</span>
+                            <span class="timestamp">2 hours ago</span>
+                        </div>
+                        <h3>How do I improve my study habits?</h3>
+                    </div>
+                    <p class="question-content">
+                        I'm struggling to maintain consistent study habits. I find myself procrastinating a lot and can't seem to focus when I do study. Any tips or strategies that have worked for others?
+                    </p>
+                    <div class="question-actions">
+                        <button class="btn btn-outline btn-sm">
+                            <i data-lucide="message-circle"></i>
+                            Answer (3)
+                        </button>
+                        <button class="btn btn-outline btn-sm">
+                            <i data-lucide="thumbs-up"></i>
+                            Helpful (12)
+                        </button>
+                    </div>
+                </div>
+                <div class="answers-list">
+                    <div class="answer">
+                        <div class="user-info">
+                            <div class="avatar">
+                                <img src="/placeholder.svg?height=32&width=32" alt="Teacher">
+                                <span class="avatar-fallback">AT</span>
+                            </div>
+                            <span class="username">Alice Teacher</span>
+                            <span class="badge">Teacher</span>
+                        </div>
+                        <p class="answer-content">
+                            Try the Pomodoro Technique: Study for 25 minutes, then take a 5-minute break. This helps maintain focus and prevents burnout.
+                        </p>
+                        <div class="answer-actions">
+                            <button class="btn btn-outline btn-sm">
+                                <i data-lucide="thumbs-up"></i>
+                                Helpful (5)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="advice-section">
+    <div class="card">
+        <div class="card-header">
+            <h2>Shared Advice</h2>
+            <div class="card-header-actions">
+                <select class="select-category">
+                    <option value="all">All Categories</option>
+                    <option value="study">Study Tips</option>
+                    <option value="career">Career Guidance</option>
+                    <option value="motivation">Motivation</option>
+                </select>
+            </div>
+        </div>
+        <div class="card-content">
+            <div class="advice-grid">
+                <div class="advice-card">
+                    <div class="advice-header">
+                        <i data-lucide="book" class="icon-blue"></i>
+                        <h3>Effective Note-Taking Strategies</h3>
+                    </div>
+                    <p class="advice-content">
+                        Use the Cornell method: Divide your page into sections for notes, questions, and summary. This helps organize information and makes revision easier.
+                    </p>
+                    <div class="advice-footer">
+                        <span class="badge">Study Tips</span>
+                        <button class="btn btn-outline btn-sm">
+                            <i data-lucide="bookmark"></i>
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="support-section">
+    <div class="card">
+        <div class="card-header">
+            <h2>Support Requests</h2>
+        </div>
+        <div class="card-content">
+            <div class="support-requests">
+                <div class="support-request-card">
+                    <div class="request-header">
+                        <h3>Textbooks for Grade 11 Student</h3>
+                        <span class="badge outline">N$450 needed</span>
+                    </div>
+                    <p class="request-description">
+                        Need assistance with purchasing mathematics and physics textbooks for the upcoming term.
+                    </p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%"></div>
+                    </div>
+                    <div class="request-stats">
+                        <span>N$292 raised</span>
+                        <span>5 donors</span>
+                    </div>
+                    <button class="btn btn-primary btn-sm donate-btn">
+                        <i data-lucide="heart"></i>
+                        Donate
+                    </button>
+                </div>
+            </div>
+            <div class="support-summary">
+                <div class="total-funds">
+                    <h3>Total Funds Needed</h3>
+                    <p class="amount">N$2,450</p>
+                </div>
+                <button class="btn btn-primary donate-all-btn">
+                    <i data-lucide="heart"></i>
+                    Donate to Support Students
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Top Contributors</h2>
+                    </div>
+                    <div class="card-content">
+                        <ul class="contributor-list">
+                            <li>
+                                <div class="avatar">
+                                    <img src="/placeholder.svg?height=32&width=32" alt="Alice Teacher">
+                                    <span class="avatar-fallback">AT</span>
+                                </div>
+                                <span>Alice Teacher</span>
+                                <span class="badge">
+                                    <i data-lucide="thumbs-up"></i>
+                                    85
+                                </span>
+                            </li>
+                            <li>
+                                <div class="avatar">
+                                    <img src="/placeholder.svg?height=32&width=32" alt="Bob Mentor">
+                                    <span class="avatar-fallback">BM</span>
+                                </div>
+                                <span>Bob Mentor</span>
+                                <span class="badge">
+                                    <i data-lucide="thumbs-up"></i>
+                                    72
+                                </span>
+                            </li>
+                            <li>
+                                <div class="avatar">
+                                    <img src="/placeholder.svg?height=32&width=32" alt="Charlie Volunteer">
+                                    <span class="avatar-fallback">CV</span>
+                                </div>
+                                <span>Charlie Volunteer</span>
+                                <span class="badge">
+                                    <i data-lucide="thumbs-up"></i>
+                                    64
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Recent Donations</h2>
+                    </div>
+                    <div class="card-content">
+                        <ul class="donation-list">
+                            <li>
+                                <i data-lucide="dollar-sign" class="icon-green"></i>
+                                <span>School supplies for Grade 10 student</span>
+                                <span class="badge outline">N$250</span>
+                            </li>
+                            <li>
+                                <i data-lucide="dollar-sign" class="icon-green"></i>
+                                <span>Textbooks for struggling family</span>
+                                <span class="badge outline">N$375</span>
+                            </li>
+                            <li>
+                                <i data-lucide="dollar-sign" class="icon-green"></i>
+                                <span>Uniform for dedicated learner</span>
+                                <span class="badge outline">N$420</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>The proposed solution is a website inspired by popular community platforms such as Quora and Reddit. It serves as a community-driven space where users can post questions, seek guidance, and offer mutual support to address educational challenges and dropout risks.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: info@eduHub.com</li>
+                    <li>Phone: +246 81 456-7890</li>
+                    <li>Address: 67 Main St, Windhoek, Namibia</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 eduHub Technology CC. | All rights reserved. | Tangeni Matheus</p>
+        </div>
+    </footer>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
